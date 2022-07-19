@@ -1,16 +1,19 @@
-import { useEffect } from "react";
-import { useProfile } from "../hooks/useProfile";
+import {
+	BrowserRouter,
+	Routes as Router,
+	Route,
+} from "react-router-dom";
+
+import { Home } from "../views/Home";
+import { Login } from "../views/Login";
 
 export const Routes = () => {
-    const { ProfileData, getProfileData } = useProfile()
-
-    useEffect(() => {
-        getProfileData('', '')
-    }, [])
-
-    return (
-        <>
-            <h1>{ProfileData?.nome}</h1>
-        </>
-    );
+	return (
+		<BrowserRouter>
+			<Router>
+				<Route path="/" element={<Home />} />
+				<Route path="/login" element={<Login />} />
+			</Router>
+		</BrowserRouter>
+	);
 };
