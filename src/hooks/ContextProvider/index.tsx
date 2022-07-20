@@ -4,7 +4,6 @@ import { ContextProviderProps, ProviderComposerProps } from './types';
 import { QuotationProvider } from '../useQuotation';
 
 const contexts = [
-  // <ThemeContextProvider />,
   <QuotationProvider children={undefined} />,
 ];
 
