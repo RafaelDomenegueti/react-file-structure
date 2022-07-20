@@ -1,11 +1,11 @@
 
 import { cloneElement } from 'react';
 import { ContextProviderProps, ProviderComposerProps } from './types';
-import { ProfileProvider } from '../useProfile';
+import { QuotationProvider } from '../useQuotation';
 
 const contexts = [
   // <ThemeContextProvider />,
-  <ProfileProvider children={undefined} />,
+  <QuotationProvider children={undefined} />,
 ];
 
 const ProviderComposer = ({ contexts, children }: ProviderComposerProps) => contexts.reduce((kids, parent) => cloneElement(parent, { children: kids }), children);
