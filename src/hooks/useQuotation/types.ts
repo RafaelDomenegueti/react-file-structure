@@ -1,10 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface QuotationContextData {
-  getQuotations: () => Promise<void>,
-  quotations: QuotationsDataResponse,
-};
-
 export interface QuotationsDataResponse {
   USDBRL?: {
     code: string,
@@ -45,6 +40,11 @@ export interface QuotationsDataResponse {
     timestamp: string,
     create_date: string,
   }
+}
+
+export interface QuotationContextData {
+  getQuotations: () => Promise<void>,
+  quotations: QuotationsDataResponse,
 }
 
 export interface QuotationProviderProps {

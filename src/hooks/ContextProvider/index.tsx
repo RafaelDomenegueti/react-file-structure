@@ -1,22 +1,26 @@
-
 import { cloneElement } from 'react';
 import { ContextProviderProps, ProviderComposerProps } from './types';
 import { QuotationProvider } from '../useQuotation';
 
-const contexts = [
-  <QuotationProvider children={undefined} />,
+const providers = [
+  QuotationProvider,
 ];
 
-const ProviderComposer = ({ contexts, children }: ProviderComposerProps) => contexts.reduce((kids, parent) => cloneElement(parent, { children: kids }), children);
+const ProviderComposer = ({ contexts, children }: ProviderComposerProps) => contexts.reduce(
+  (kids, Parent) => cloneElement(<Parent />, {
+    children: kids,
+  }),
+  children,
+);
 
-const ContextProvider = ({ children }: ContextProviderProps) => {
+function ContextProvider({ children }: ContextProviderProps) {
   return (
     <ProviderComposer
-      contexts={contexts}
+      contexts={providers}
     >
       {children}
     </ProviderComposer>
   );
-};
+}
 
 export default ContextProvider;

@@ -1,5 +1,5 @@
-import Api from "../api";
+import Api from '../api';
 
 export async function requestQuotations() {
-    return await Api.get('json/last/USD-BRL,EUR-BRL,BTC-BRL')
+  return Api.get('json/last/USD-BRL,EUR-BRL,BTC-BRL');
 }

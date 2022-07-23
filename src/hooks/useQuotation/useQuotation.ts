@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { QuotationContext, QuotationProvider } from "./QuotationContext";
+import { useContext } from 'react';
+import { QuotationContext, QuotationProvider } from './QuotationContext';
 
 function useQuotation() {
   const quotation = useContext(QuotationContext);
@@ -7,4 +7,4 @@ function useQuotation() {
   return quotation;
 }
 
-export { useQuotation, QuotationProvider }
+export { useQuotation, QuotationProvider };

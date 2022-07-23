@@ -1,17 +1,17 @@
 import {
-	BrowserRouter,
-	Routes as Router,
-	Route,
-} from "react-router-dom";
+  BrowserRouter,
+  Routes as Router,
+  Route,
+} from 'react-router-dom';
 
-import { Home } from "../views/Home";
+import { Home } from '../views/Home';
 
-export const Routes = () => {
-	return (
-		<BrowserRouter>
-			<Router>
-				<Route path="/" element={<Home />} />
-			</Router>
-		</BrowserRouter>
-	);
-};
+export function Routes() {
+  return (
+    <BrowserRouter>
+      <Router>
+        <Route path="/" element={<Home />} />
+      </Router>
+    </BrowserRouter>
+  );
+}

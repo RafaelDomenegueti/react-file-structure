@@ -1,3 +1,3 @@
-import { defaultTheme } from './theme'
+import { defaultTheme } from './theme';
 
 export { defaultTheme };

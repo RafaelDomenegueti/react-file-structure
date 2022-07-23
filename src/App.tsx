@@ -1,11 +1,10 @@
-import ContextProvider from './hooks/ContextProvider'
 import { ThemeProvider } from 'styled-components';
-import { Routes } from './routes'
-import { useState } from 'react';
+import ContextProvider from './hooks/ContextProvider';
+import { Routes } from './routes';
 import { defaultTheme } from './theme';
 
 export function App() {
-  const [theme, useTheme] = useState(defaultTheme);
+  const theme = defaultTheme;
 
   return (
     <ContextProvider>
@@ -13,5 +12,5 @@ export function App() {
         <Routes />
       </ThemeProvider>
     </ContextProvider>
-  )
+  );
 }

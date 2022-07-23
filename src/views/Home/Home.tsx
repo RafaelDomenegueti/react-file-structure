@@ -1,12 +1,20 @@
-import { 
+import { useEffect } from 'react';
+import { useQuotation } from '../../hooks/useQuotation';
+import {
   Container,
   Title,
-} from './style'
+} from './style';
 
-export const Home = () => {
+export function Home() {
+  const { quotations, getQuotations } = useQuotation();
+
+  useEffect(() => {
+    getQuotations();
+  }, []);
+
   return (
     <Container>
-      <Title>Home</Title>
+      <Title>{quotations.BTCBRL?.name}</Title>
     </Container>
-  )
+  );
 }
