@@ -14,32 +14,6 @@ export interface QuotationsDataResponse {
     timestamp: string,
     create_date: string,
   },
-  EURBRL?: {
-    code: string,
-    codein: string,
-    name: string,
-    high: string,
-    low: string,
-    varBid: string,
-    pctChange: string,
-    bid: string,
-    ask: string,
-    timestamp: string,
-    create_date: string,
-  },
-  BTCBRL?: {
-    code: string,
-    codein: string,
-    name: string,
-    high: string,
-    low: string,
-    varBid: string,
-    pctChange: string,
-    bid: string,
-    ask: string,
-    timestamp: string,
-    create_date: string,
-  }
 }
 
 export interface QuotationContextData {

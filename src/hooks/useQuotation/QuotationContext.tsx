@@ -5,7 +5,7 @@ import { QuotationContextData, QuotationsDataResponse, QuotationProviderProps } 
 export const QuotationContext = createContext({} as QuotationContextData);
 
 export function QuotationProvider({ children }: QuotationProviderProps) {
-  const [quotations, setQuotations] = useState({} as QuotationsDataResponse);
+  const [quotations, setQuotations] = useState<QuotationsDataResponse>({});
 
   async function getQuotations() {
     const { data } = await requestQuotations();

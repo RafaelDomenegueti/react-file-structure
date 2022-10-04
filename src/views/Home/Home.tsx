@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useQuotation } from '../../hooks/useQuotation';
 import {
-  Container,
-  Title,
+  Container, Title, Quotation, QuotationContainer,
 } from './style';
+import { formatter } from '../../global/utils';
 
 export function Home() {
   const { quotations, getQuotations } = useQuotation();
@@ -14,7 +14,19 @@ export function Home() {
 
   return (
     <Container>
-      <Title>{quotations.BTCBRL?.name}</Title>
+      <QuotationContainer>
+        <Title>{quotations.USDBRL?.name}</Title>
+        <Quotation>
+          Purchase:
+          {' '}
+          {formatter.format(Number(quotations.USDBRL?.bid))}
+        </Quotation>
+        <Quotation>
+          Sell:
+          {' '}
+          {formatter.format(Number(quotations.USDBRL?.ask))}
+        </Quotation>
+      </QuotationContainer>
     </Container>
   );
 }

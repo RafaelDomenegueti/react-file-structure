@@ -1,0 +1,7 @@
+index.html
+package.json
+vite.config.ts
+
+/public
+/build
+/node_modules

@@ -1,14 +1,15 @@
 import { ThemeProvider } from 'styled-components';
 import ContextProvider from './hooks/ContextProvider';
 import { Routes } from './routes';
-import { defaultTheme } from './theme';
+import { darkTheme, lightTheme } from './theme';
 
 export function App() {
-  const theme = defaultTheme;
+  const hours = (new Date()).getHours();
+  const isDay = hours > 6 && hours < 20;
 
   return (
     <ContextProvider>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={isDay ? lightTheme : darkTheme}>
         <Routes />
       </ThemeProvider>
     </ContextProvider>
