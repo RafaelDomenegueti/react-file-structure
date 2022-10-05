@@ -1,8 +1,10 @@
 import { DefaultTheme } from 'styled-components';
+import backgroundLight from '../assets/images/background-light.jpg';
+import backgroundDark from '../assets/images/background-dark.jpg';
 
 export const darkTheme: DefaultTheme = {
   borderRadius: '12px',
-  background: "url('https://themes10.win/wp-content/uploads/2022/08/Unexpected-Land.jpg')",
+  background: `url(${backgroundDark})`,
   palette: {
     primary: 'rgba(17, 25, 40, 0.48)',
     secondary: '#55828B',
@@ -17,7 +19,7 @@ export const darkTheme: DefaultTheme = {
 
 export const lightTheme: DefaultTheme = {
   borderRadius: '12px',
-  background: "url('https://themes10.win/wp-content/uploads/2022/08/Unexpected-Land-Light-1.jpg')",
+  background: `url(${backgroundLight})`,
   palette: {
     primary: 'rgba(17, 25, 40, 0.28)',
     secondary: '#55828B',
