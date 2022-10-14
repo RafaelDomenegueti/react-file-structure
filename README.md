@@ -1,7 +1,7 @@
 
 # React File Structure
 
-Este projeto tem o objetivo de ajudar príncipalmente desenvolvedores iniciantes/intermediários que desejam útilizar uma estrutura simples e poderosa em seus projetos.
+Este projeto tem o objetivo de ajudar principalmente desenvolvedores iniciantes/intermediários que desejam utilizar uma estrutura simples e poderosa em seus projetos.
 
 
 ## Ferramentas
@@ -67,14 +67,14 @@ Os arquivos possuem uma organização parecida, cada arquivo deve executar apena
 
 ### Context API
 
-Os hooks possuem uma estrutura um pouco diferente das demais pastas, primeiramente podemos notar a presença da pasta com o nome de `ContexProvider`, este componente tem a finalidade de simplificar o uso dos `Providers` reduzindo-os em apenas um componente.
+Os hooks possuem uma estrutura um pouco diferente das demais pastas, primeiramente podemos notar a presença da pasta com o nome de `ContextProvider`, este componente tem a finalidade de simplificar o uso dos `Providers` reduzindo-os em apenas um componente.
 
     .
     ├── ...
     ├── src
     │   ├── ...
     │   ├── hooks
-    │   │   ├── ContexProvider              # Encapsulador de Providers
+    │   │   ├── ContextProvider             # Encapsulador de Providers
     │   │   ├── useQuotaion
     │   │   │   ├── index.ts                # Auxiliador de importação
     │   │   │   ├── QuotationContext.tsx    # Contexto
